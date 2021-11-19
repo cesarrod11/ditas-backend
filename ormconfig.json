@@ -1,7 +1,7 @@
 [
   {
     "type": "postgres",
-    "host": "postgres://hkzirkgnpxknej:d316b775a63c2fc76eb911221d1001fff127b1a83e909561a9e062ff25c0860b@ec2-3-217-129-39.compute-1.amazonaws.com:5432/dfouv8n7dn3it",
+    "host": "ec2-3-217-129-39.compute-1.amazonaws.com:5432",
     "port": 5432,
     "username": "hkzirkgnpxknej",
     "password": "d316b775a63c2fc76eb911221d1001fff127b1a83e909561a9e062ff25c0860b",
