@@ -8,7 +8,7 @@ import 'express-async-errors';
 
 import rateLimiter from './middleware/rateLimiter';
 import routes from './routes';
-import AppError from '@shared/errors/AppError';
+import AppError from './errors/AppError';
 
 import '@shared/infra/typeorm';
 import '@shared/container';
