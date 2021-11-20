@@ -5,8 +5,8 @@ module.exports = {
     "username": "hkzirkgnpxknej",
     "password": "d316b775a63c2fc76eb911221d1001fff127b1a83e909561a9e062ff25c0860b",
     "database": "dfouv8n7dn3it",
-    "entities": ["./build/modules/**/infra/typeorm/entities/*.ts"],
-    "migrations": ["./build/shared/infra/typeorm/migrations/*.ts"],
+    "entities": ["./dist/modules/**/infra/typeorm/entities/*.ts"],
+    "migrations": ["./dist/shared/infra/typeorm/migrations/*.ts"],
     "cli": {
       "migrationsDir": "./src/shared/infra/typeorm/migrations"
     },
