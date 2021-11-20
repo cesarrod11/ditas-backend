@@ -6,9 +6,9 @@ import cors from 'cors';
 import { errors } from 'celebrate';
 import 'express-async-errors';
 
-import AppError from 'shared/errors/AppError.js';
 import rateLimiter from './middleware/rateLimiter';
 import routes from './routes';
+import AppError from '@shared/errors/AppError';
 
 import '@shared/infra/typeorm';
 import '@shared/container';
