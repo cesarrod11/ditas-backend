@@ -6,7 +6,6 @@ import cors from 'cors';
 import { errors } from 'celebrate';
 import 'express-async-errors';
 
-import uploadConfig from 'config/upload';
 import AppError from '@shared/errors/AppError';
 import rateLimiter from './middleware/rateLimiter';
 import routes from './routes';
@@ -25,7 +24,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use('/files', express.static(uploadConfig.uploadsFolder));
 app.use(rateLimiter);
 app.use(routes);
 
