@@ -1899,7 +1899,7 @@ array-unique@^0.3.2:
 
 arrify@^1.0.0:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
+  resolved "https://registry.npmjs.org/arrify/-/arrify-1.0.1.tgz"
   integrity sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=
 
 asn1@~0.2.3:
@@ -2814,7 +2814,7 @@ diff-sequences@^26.6.2:
 
 diff@^3.1.0:
   version "3.5.0"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
+  resolved "https://registry.npmjs.org/diff/-/diff-3.5.0.tgz"
   integrity sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
 
 diff@^4.0.1:
@@ -6540,7 +6540,7 @@ source-map-resolve@^0.5.0:
 
 source-map-support@^0.4.0:
   version "0.4.18"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.18.tgz#0286a6de8be42641338594e97ccea75f0a2c585f"
+  resolved "https://registry.npmjs.org/source-map-support/-/source-map-support-0.4.18.tgz"
   integrity sha512-try0/JqxPLF9nOjvSta7tVondkP5dwgyLDjVoyMDlmjugT2lRZ1OfsrYTkCd2hkDnJTKRbO/Rl3orm8vlsUzbA==
   dependencies:
     source-map "^0.5.6"
@@ -7039,7 +7039,7 @@ ts-node-dev@^1.0.0:
 
 ts-node@3.3.0:
   version "3.3.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-3.3.0.tgz#c13c6a3024e30be1180dd53038fc209289d4bf69"
+  resolved "https://registry.npmjs.org/ts-node/-/ts-node-3.3.0.tgz"
   integrity sha1-wTxqMCTjC+EYDdUwOPwgkonUv2k=
   dependencies:
     arrify "^1.0.0"
@@ -7076,7 +7076,7 @@ tsconfig-paths@^3.9.0:
 
 tsconfig@^6.0.0:
   version "6.0.0"
-  resolved "https://registry.yarnpkg.com/tsconfig/-/tsconfig-6.0.0.tgz#6b0e8376003d7af1864f8df8f89dd0059ffcd032"
+  resolved "https://registry.npmjs.org/tsconfig/-/tsconfig-6.0.0.tgz"
   integrity sha1-aw6DdgA9evGGT434+J3QBZ/80DI=
   dependencies:
     strip-bom "^3.0.0"
@@ -7192,10 +7192,10 @@ typeorm@^0.2.29:
     yargonaut "^1.1.2"
     yargs "^16.0.3"
 
-typescript@2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.2.tgz#f8395f85d459276067c988aa41837a8f82870844"
-  integrity sha1-+DlfhdRZJ2BnyYiqQYN6j4KHCEQ=
+typescript@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.2.tgz#8ac1fba9f52256fdb06fb89e4122fa6a346c2998"
+  integrity sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==
 
 uglify-js@^3.1.4:
   version "3.12.5"
@@ -7621,5 +7621,5 @@ yn@3.1.1:
 
 yn@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/yn/-/yn-2.0.0.tgz#e5adabc8acf408f6385fc76495684c88e6af689a"
+  resolved "https://registry.npmjs.org/yn/-/yn-2.0.0.tgz"
   integrity sha1-5a2ryKz0CPY4X8dklWhMiOavaJo=
