@@ -19,7 +19,9 @@ module.exports = {
         "shared/*"
       ]
     },
-    "esModuleInterop": true,
+    "compilerOptions": {
+      "esModuleInterop": true,
+    },
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
