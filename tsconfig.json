@@ -10,13 +10,13 @@
     "allowJs": true,
     "paths": {
       "@modules/*": [
-        "app/src/modules/*"
+        "dist/modules/*"
       ],
       "@config/*": [
-        "app/src/config/*"
+        "dist/config/*"
       ],
       "@shared/*": [
-        "app/src/shared/*"
+        "dist/shared/*"
       ]
     },
     "esModuleInterop": true,
