@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./dist",
+    "outDir": "./src",
+    "rootDir": "./src",
     "strict": true,
     "strictPropertyInitialization": false,
-    "baseUrl": "./dist",
+    "baseUrl": "./src",
     "allowJs": true,
     "paths": {
       "@modules/*": [
