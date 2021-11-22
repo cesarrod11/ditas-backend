@@ -17,7 +17,7 @@ import '@shared/container';
 const app = express();
 
 const corsOptions = {
-  origin: 'http://www.gobarber.senhorbiscoito.com',
+  origin: 'http://www.ditas.com.br',
   optionsSuccessStatus: 200,
 
 

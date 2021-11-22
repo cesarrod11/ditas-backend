@@ -44,7 +44,7 @@ export default {
   config: {
     disk: {},
     aws: {
-      bucket: 'app.gobarber.files',
+      bucket: 'app.ditas.files',
     },
   },
 } as IUploadConfig;
