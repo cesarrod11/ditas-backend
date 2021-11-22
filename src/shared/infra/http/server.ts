@@ -6,9 +6,10 @@ import cors from 'cors';
 import { errors } from 'celebrate';
 import 'express-async-errors';
 
+import uploadConfig from '@config/upload';
+import AppError from '@shared/errors/AppError';
 import rateLimiter from './middleware/rateLimiter';
 import routes from './routes';
-import AppError from './errors/AppError';
 
 import '@shared/infra/typeorm';
 import '@shared/container';
@@ -24,6 +25,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
+app.use('/files', express.static(uploadConfig.uploadsFolder));
 app.use(rateLimiter);
 app.use(routes);
 
@@ -43,6 +45,6 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
     .json({ status: 'error', message: 'Internal Server Error' });
 });
 
-app.listen(process.env.PORT || 3333, () => {
+app.listen(3333, () => {
   console.log('🚀 Server started on port 3333');
 });

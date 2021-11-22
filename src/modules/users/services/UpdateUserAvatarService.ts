@@ -5,7 +5,7 @@ import { injectable, inject } from 'tsyringe';
 
 import IUsersRepository from '../repositories/IUsersRepository';
 import IStorageProvider from '@shared/container/providers/StorageProvider/models/IStorageProvider';
-import AppError from '@shared/infra/http/errors/AppError';
+import AppError from '@shared/errors/AppError';
 
 import User from '../infra/typeorm/entities/User';
 
