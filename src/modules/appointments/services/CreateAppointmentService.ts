@@ -4,7 +4,6 @@ import { startOfHour, isBefore, getHours, format } from 'date-fns';
 import AppError from '@shared/errors/AppError';
 
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
-import INotificationsRepository from '@modules/notifications/repositories/INotificationsRepository';
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
 import Appointment from '../infra/typeorm/entities/Appointment';
@@ -25,9 +24,6 @@ class CreateAppointmentService {
   constructor(
     @inject('AppointmentsRepository')
     private appointmentsRepository: IAppointmentsRepository,
-
-    @inject('NotificationsRepository')
-    private notificationsRepository: INotificationsRepository,
 
     @inject('CacheProvider')
     private cacheProvider: ICacheProvider,
@@ -80,11 +76,6 @@ class CreateAppointmentService {
     });
 
     const dateFormatted = format(appointment.date, "dd/MM/yyyy 'às' HH:mm'h'");
-
-    await this.notificationsRepository.create({
-      recipient_id: provider_id,
-      content: `Novo agendamento para o dia ${dateFormatted}`,
-    });
 
     await this.cacheProvider.invalidate(
       `provider-appointments:${provider_id}:${format(
