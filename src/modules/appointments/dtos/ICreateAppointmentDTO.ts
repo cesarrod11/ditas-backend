@@ -7,5 +7,4 @@ export default interface ICreateAppointmentDto {
   amount: string,
   payment_method: string,
   note: string
-
 }
