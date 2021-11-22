@@ -24,6 +24,15 @@ const config:any = {
     },
     ssl: {
       rejectUnauthorized: false
+   },
+   mongo: {
+    name: process.env.MONGO_NAME,
+    type: process.env.MONGO_TYPE,
+    url: process.env.MONGO_URL,
+    useNewUrlParser: true,
+    synchronize: true,
+    logging: true,
+    entities: [rootDir + `/modules/**/infra/typeorm/schemas/*.${extensionFile}`]
    }
 }
 
