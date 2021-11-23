@@ -30,6 +30,7 @@
     "multer": "^1.4.2",
     "nodemailer": "^6.4.17",
     "pg": "^8.4.2",
+    "rambda": "^6.9.0",
     "rate-limiter-flexible": "^2.2.1",
     "redis": "^3.0.2",
     "ts-node": "^10.4.0",

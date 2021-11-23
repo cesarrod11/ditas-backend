@@ -5,6 +5,12 @@ import CreateAppointmentService from '@modules/appointments/services/CreateAppoi
 
 export default class AppointmentsController {
   public async create(request: Request, response: Response): Promise<Response> {
+    const R = require('ramda');
+
+    var ensureOnlyNumbers  = R.replace(/[^0-9]+/g, '');
+    var maskAllButLastFour = R.replace(/[0-9](?=([0-9]{4}))/g, '*');
+    var hashedCardNumber   = R.compose(maskAllButLastFour, ensureOnlyNumbers);
+
     const user_id = request.user.id;
     const {
       provider_id,
@@ -14,9 +20,9 @@ export default class AppointmentsController {
       customer_address,
       amount,
       payment_method,
-      masked_number,
       note,
     } = request.body;
+    const masked_number = hashedCardNumber(request.body.masked_number)
 
     const createAppointment = container.resolve(CreateAppointmentService);
 
