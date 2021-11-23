@@ -9,10 +9,12 @@ export default class AppointmentsController {
     const {
       provider_id,
       date,
+      period,
       task_type,
       customer_address,
       amount,
       payment_method,
+      masked_number,
       note,
     } = request.body;
 
@@ -20,12 +22,14 @@ export default class AppointmentsController {
 
     const appointment = await createAppointment.execute({
       date,
+      period,
       provider_id,
       user_id,
       task_type,
       customer_address,
       amount,
       payment_method,
+      masked_number,
       note,
     });
 

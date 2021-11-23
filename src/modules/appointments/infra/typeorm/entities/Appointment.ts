@@ -31,6 +31,9 @@ class Appointment {
   date: Date;
 
   @Column()
+  period: string;
+
+  @Column()
   task_type: string;
 
   @Column()
@@ -41,6 +44,9 @@ class Appointment {
 
   @Column()
   payment_method: string;
+
+  @Column()
+  masked_number: string;
 
   @Column()
   note: string;

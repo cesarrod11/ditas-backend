@@ -17,10 +17,12 @@ appointmentsRouter.post(
     [Segments.BODY]: {
       provider_id: Joi.string().uuid().required(),
       date: Joi.date(),
+      period: Joi.string(),
       task_type: Joi.string(),
       customer_address: Joi.string(),
       amount: Joi.string(),
       payment_method: Joi.string(),
+      masked_number: Joi.string(),
       note: Joi.string(),
     },
   }),

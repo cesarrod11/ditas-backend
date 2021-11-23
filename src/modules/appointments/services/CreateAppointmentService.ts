@@ -10,13 +10,15 @@ import Appointment from '../infra/typeorm/entities/Appointment';
 
 interface IRequest {
   date: Date;
+  period: string;
   provider_id: string;
   user_id: string;
-  task_type: string,
-  customer_address: string,
-  amount: string,
-  payment_method: string,
-  note: string
+  task_type: string;
+  customer_address: string;
+  amount: string;
+  payment_method: string;
+  masked_number: string;
+  note: string;
 }
 
 @injectable()
@@ -31,12 +33,14 @@ class CreateAppointmentService {
 
   public async execute({
     date,
+    period,
     provider_id,
     user_id,
     task_type,
     customer_address,
     amount,
     payment_method,
+    masked_number,
     note,
   }: IRequest): Promise<Appointment> {
     const appointmentDate = startOfHour(date);
@@ -68,10 +72,12 @@ class CreateAppointmentService {
       provider_id,
       user_id,
       date: appointmentDate,
+      period,
       task_type,
       customer_address,
       amount,
       payment_method,
+      masked_number,
       note,
     });
 
