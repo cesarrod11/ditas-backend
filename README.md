@@ -13,7 +13,8 @@
     docker start database mongodb redis
   ```
 
-  Primeiramente, você precisará criar um arquivo contendo as informações de acesso ao seu banco de dados. Esta aplicação foi desenvolvida utilizando o **Postgres** e **MongoDB**. Crie um arquivo chamado *ormconfig.json* na pasta `backend` e preencha conforme o arquivo-modelo *ormconfig.example.json*. Lembre-se, antes de rodar as migrations, de criar o banco de dados e informar o nome da sua base no arquivo *ormconfig.json*.
+  **Importante**
+   É necessário criar dentro do container do banco de dados, a tabela que está definida no arquivo .env na variável TYPEORM_DATABASE.
 
   ```bash
     # Baixar as dependências
