@@ -29,7 +29,7 @@ const config:any = {
     name: process.env.MONGO_NAME,
     type: process.env.MONGO_TYPE,
     host: process.env.MONGO_HOST,
-    database: process.env.MONGO_DATABASE,
+    url: process.env.MONGO_URL,
     port: process.env.MONGO_PORT,
     useNewUrlParser: true,
     synchronize: true,
