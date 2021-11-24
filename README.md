@@ -14,7 +14,9 @@
   ```
 
   **Importante**
-   É necessário criar dentro do container do banco de dados, a tabela que está definida no arquivo .env na variável TYPEORM_DATABASE.
+  
+  É necessário criar dentro do container do banco de dados, a tabela que está definida no arquivo .env na variável TYPEORM_DATABASE.
+
 
   ```bash
     # Baixar as dependências
