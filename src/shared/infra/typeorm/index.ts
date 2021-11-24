@@ -28,7 +28,9 @@ const config:any = {
    mongo: {
     name: process.env.MONGO_NAME,
     type: process.env.MONGO_TYPE,
-    url: process.env.MONGO_URL,
+    host: process.env.MONGO_HOST,
+    database: process.env.MONGO_DATABASE,
+    port: process.env.MONGO_PORT,
     useNewUrlParser: true,
     synchronize: true,
     logging: true,
