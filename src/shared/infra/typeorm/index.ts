@@ -22,6 +22,9 @@ const config:any = {
     cli: {
       migrationsDir: rootDir + "/shared/infra/typeorm/migrations"
     },
+    ssl: {
+      rejectUnauthorized: false
+   },
    mongo: {
     name: process.env.MONGO_NAME,
     type: process.env.MONGO_TYPE,
