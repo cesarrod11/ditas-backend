@@ -4,20 +4,21 @@ import { startOfHour, isBefore, getHours, format } from 'date-fns';
 import AppError from '@shared/errors/AppError';
 
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
-import INotificationsRepository from '@modules/notifications/repositories/INotificationsRepository';
 import IAppointmentsRepository from '../repositories/IAppointmentsRepository';
 
 import Appointment from '../infra/typeorm/entities/Appointment';
 
 interface IRequest {
   date: Date;
+  period: string;
   provider_id: string;
   user_id: string;
-  task_type: string,
-  customer_address: string,
-  amount: string,
-  payment_method: string,
-  note: string
+  task_type: string;
+  customer_address: string;
+  amount: string;
+  payment_method: string;
+  masked_number: string;
+  note: string;
 }
 
 @injectable()
@@ -26,21 +27,20 @@ class CreateAppointmentService {
     @inject('AppointmentsRepository')
     private appointmentsRepository: IAppointmentsRepository,
 
-    @inject('NotificationsRepository')
-    private notificationsRepository: INotificationsRepository,
-
     @inject('CacheProvider')
     private cacheProvider: ICacheProvider,
   ) {}
 
   public async execute({
     date,
+    period,
     provider_id,
     user_id,
     task_type,
     customer_address,
     amount,
     payment_method,
+    masked_number,
     note,
   }: IRequest): Promise<Appointment> {
     const appointmentDate = startOfHour(date);
@@ -72,19 +72,16 @@ class CreateAppointmentService {
       provider_id,
       user_id,
       date: appointmentDate,
+      period,
       task_type,
       customer_address,
       amount,
       payment_method,
+      masked_number,
       note,
     });
 
     const dateFormatted = format(appointment.date, "dd/MM/yyyy 'às' HH:mm'h'");
-
-    await this.notificationsRepository.create({
-      recipient_id: provider_id,
-      content: `Novo agendamento para o dia ${dateFormatted}`,
-    });
 
     await this.cacheProvider.invalidate(
       `provider-appointments:${provider_id}:${format(

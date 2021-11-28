@@ -23,6 +23,10 @@ export default class CreateAppointments1604980752062
             type: 'timestamp with time zone',
           },
           {
+            name: 'period',
+            type: 'varchar',
+          },
+          {
             name: 'task_type',
             type: 'varchar',
           },
@@ -36,6 +40,10 @@ export default class CreateAppointments1604980752062
           },
           {
             name: 'payment_method',
+            type: 'varchar',
+          },
+          {
+            name: 'masked_number',
             type: 'varchar',
           },
           {
