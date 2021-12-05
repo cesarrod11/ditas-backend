@@ -4,6 +4,7 @@ temp
 coverage
 tmp/*
 !tmp/.gitkeep
+.vscode/
 
 .env
 .vscode
